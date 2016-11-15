@@ -75,7 +75,7 @@
                 arr = this.url.split("?")[1].split("&");
                 for(var i = 0, len = arr.length; i < len;i ++) {
                 	_tmp = arr[i].split("=");
-                	res.quertString[_tmp[0]] = decode(_tmp[1]);
+                	res.quertString[_tmp[0]] = _tmp[1] ? decode(_tmp[1]) : "";
                 }
             }
 
